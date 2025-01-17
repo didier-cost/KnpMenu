@@ -3,13 +3,15 @@
 {% macro attributes(attributes) %}
 {% for name, value in attributes %}
     {%- if value is not none and value is not same as(false) -%}
-        {{- ' %s="%s"'|format(name, value is same as(true) ? name|e|replace({'\&':'&'}) : value|e|replace({'\&':'&'}))|raw -}}
+        {{- ' %s="%s"'|format(name, value is same as(true) ? name|e|replace({'\&': '&'}) : value|e|replace({'\&': '&'}))|raw -}}
     {%- endif -%}
 {%- endfor -%}
 {% endmacro %}
 
 {% block compressed_root %}
+{{ apply safespaceless}}
 {{ block('root') }}
+{% endapply %}
 {% endblock %}
 
 {% block root %}
