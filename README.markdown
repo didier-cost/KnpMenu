@@ -7,7 +7,7 @@ but can now be used stand-alone.
 
 This fork has the aim to fix deprecation since Twig 3.12 for our project
 
-[![Build Status](https://github.com/didier-cost/KnpMenu/actions/workflows/build.yaml/badge.svg)](https://github.com/KnpLabs/KnpMenu/actions/workflows/build.yaml)
+[![Build Status](https://github.com/didier-cost/KnpMenu/actions/workflows/build.yaml/badge.svg)](https://github.com/didier-cost/KnpMenu/actions/workflows/build.yaml)
 
 ## Credits
 
