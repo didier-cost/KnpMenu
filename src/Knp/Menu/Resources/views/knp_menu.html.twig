@@ -9,7 +9,7 @@
 {% endmacro %}
 
 {% block compressed_root %}
-{{ apply safespaceless }}
+{% apply safespaceless %}
 {{ block('root') }}
 {% endapply %}
 {% endblock %}
