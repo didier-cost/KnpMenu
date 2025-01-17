@@ -201,8 +201,8 @@ final class MenuExtensionTest extends TestCase
     ): TemplateWrapper {
         $loader = new ArrayLoader(['index' => $template]);
         $twig = new Environment($loader, ['debug' => true, 'cache' => false]);
-        $twig->addExtension(new MenuExtension());
         $twig->addExtension(new SpacelessExtension());
+        $twig->addExtension(new MenuExtension());
         $twig->addRuntimeLoader(new FactoryRuntimeLoader([
             MenuRuntimeExtension::class => fn () => new MenuRuntimeExtension(
                 $helper,
