@@ -18,9 +18,9 @@ class SpacelessExtension extends AbstractExtension
         ];
     }
 
-    public function safeSpaceless(string $content): string
+    public function safeSpaceless(?string $content): ?string
     {
-        return trim(preg_replace('/>\s+</', '><', $content ?? ''));
+        return trim(preg_replace('/>\s+</', '><', $content ?? '') ?? '');
     }
 
 }
