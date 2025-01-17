@@ -1,5 +1,5 @@
 {
-    "name": "knplabs/knp-menu",
+    "name": "didier-cost/knp-menu",
     "type": "library",
     "description": "An object oriented menu library",
     "keywords": ["menu", "tree"],
