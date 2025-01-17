@@ -7,6 +7,7 @@ use Knp\Menu\Matcher\MatcherInterface;
 use Knp\Menu\Twig\Helper;
 use Knp\Menu\Twig\MenuExtension;
 use Knp\Menu\Twig\MenuRuntimeExtension;
+use Knp\Menu\Twig\SpacelessExtension;
 use Knp\Menu\Util\MenuManipulator;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -201,6 +202,7 @@ final class MenuExtensionTest extends TestCase
         $loader = new ArrayLoader(['index' => $template]);
         $twig = new Environment($loader, ['debug' => true, 'cache' => false]);
         $twig->addExtension(new MenuExtension());
+        $twig->addExtension(new SpacelessExtension());
         $twig->addRuntimeLoader(new FactoryRuntimeLoader([
             MenuRuntimeExtension::class => fn () => new MenuRuntimeExtension(
                 $helper,
